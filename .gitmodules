@@ -1,0 +1,4 @@
+[submodule "themes/modul-salman"]
+	path = themes/modul-salman
+	url = https://github.com/SlmnMEDIA/modul-salman.git
+	branch = master
