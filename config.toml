@@ -5,22 +5,22 @@ theme                         = "modul-salman"
 summaryLength                 = 10
 
 [Author] # Used in authorbox
-  name                        = "Jhon Doe"
-  bio                         = ""
+  name                        = "Wisnu G. Saputra"
+  bio                         = "Flutter | Mobile Tech Enthusiast | Software Engineer at KodingWorks. Saya juga suka blogging dan mempelajari hal teknologi baru."
   avatar                      = "img/avatar.webp"
   job                         = "Software Engineer"
   gender                      = "male"
-  email                       = "jhon-doe@gmail.com"
-
-
+  email                       = "wisnuwiry@gmail.com"
+  donate                      = true
+  
 [Params]
-  subTitle                    = "Personal site, Blog, and Portfolio"
   description                 = "Sebuah catatan dan blog pribadi saya. Saya juga akan membagi tentang pengalaman saya dan teknologi-teknolgi yang saya gunakan/pelajari atau yang sedang populer." # Site Description. Used in meta description
   images                      = ["img/avatar.webp"]
   copyright                   = "Wisnuwiry" # Copyright holder, otherwise will use .Site.Title
   opengraph                   = true # Enable OpenGraph if true
   twitter_cards               = true # Enable Twitter Cards if true
-  mainSections                = ["post"] # Set main page sections
+  mainSections                = ["post", "snippet"] # Set main page sections
+  projectSections             = ["project"] # Set main page sections
   dateFormat                  = "January 02, 2006" # Change the format of dates
   # customCSS                 = ["css/custom.css"] # Include custom CSS files
   customJS                    = []
@@ -34,27 +34,20 @@ summaryLength                 = 10
   fontUnit                    = "em"
   largestFontSize             = 2.5
   smallestFontSize            = 1
-  googleSearchConsole         = ""
-  # GoogleAnalytics             = ""
-  # fb_admins                   = 
-  # fb_app_id                   = 
+  googleSearchConsole         = "HD_A_of8GbY1AMjHR-nwxsFAZUf7xbfUIuWDUlLEvMg"
+  GoogleAnalytics             = "UA-147337173-1"
+  fb_admins                   = 100023577212451
+  fb_app_id                   = 192065405413624
   paginateLength              = 5
-  # adsenseId                   = 
-
-  # Google Search custom, more info: https://cse.google.com/cse/all
+  # adsenseId                   = "ca-pub-6496667754181154"
   customSearchId              = "004021659876411083349:a2ysxpichpc"
-
-  endMessagePost              = "Wrong content? "
-  
-  # Link repo to edit content
+  endMessagePost              = "Terdapat kesalahan penulisan, typo, ataupun juga kurang sesuai dalam penulisan, bantu Saya"
   editContentPageLink         = "https://github.com/wisnuwiry/blog-v2/edit/master/content/"
-  
-  # Formspree form contact id, more info: https://cse.google.com/cse/all
-  formspreeId                 = ""
-  
+  formspreeId                 = "xjvperzz"
+  subTitle                      = "Personal site, Blog, and Portfolio"
 
 [Params.Hero]
-  title                       = "A Personal Site By Jhon Doe"
+  title                       = "A Personal Site By WisnuWiry"
   desc                        = "Welcome to my Blog :)"
 
 [Params.Entry]
@@ -66,7 +59,7 @@ summaryLength                 = 10
   previewOnly                 = false # Show only preview featured image
 
 [Params.Comments]
-  repository                  = "" # Repository to host your comment, ex: username/repo
+  repository                  = "wisnuwiry/blog-v2"
 
 # Navigation bar
 [menu]
@@ -106,13 +99,13 @@ weight = 5
   homeText                    = "Home" # Home node text
 
 [Params.Social]
-  twitter                     = "jhon-doe"
-  telegram                    = "jhon-doe"
-# instagram                   = "jhon-doe"
+  twitter                     = "wisnuwiry"
+  telegram                    = "wisnuwiry"
+# instagram                   = "wisnuwiry"
   linkedin                    = "wisnu-saputra"
-  github                      = "jhon-doe"
-  gitlab                      = "jhon-doe"
-  medium                      = "jhon-doe"
+  github                      = "wisnuwiry"
+  gitlab                      = "wisnuwiry"
+  medium                      = "wisnuwiry"
 
 [Params.Share] # Entry Share block
   facebook                    = true
@@ -129,7 +122,7 @@ weight = 5
   name                        = "Wisnuwiry"
   shortName                   = "Wisnuwiry"
   display                     = "standalone"
-  startUrl                    = "https://salmantgl.netlify.app"
+  startUrl                    = "/?utm_source=homescreen"
   backgroundColor             = "#8dc153"
   themeColor                  = "#1da1f2"
   description                 = "Personal Site By Wisnuwiry"
@@ -143,57 +136,50 @@ weight = 5
     isPlainText               = true
     notAlternative            = true
 
+[taxonomies]
+    category = "categories"
+    series = "series"
+    tags = "tags"
+    
 [outputs]
   home                        = ["HTML", "RSS", "MANIFEST"]
 
 enableRobotsTXT               = true
 
 # Pagination
-Paginate                      = 3
+Paginate                      = 5
  
+[sitemap]
+  changefreq = "daily"
+  changeFreqPage = "monthly"
+  filename = "sitemap.xml"
+  priority = 1
+  priorityPage = 0.5
+
+[related]
+    threshold = 0 
+    includeNewer = true
+    toLower = false
+
+    [[related.indices]]
+        name = "categories"
+        weight = 100
+
+    [[related.indices]]
+        name = "date"
+        weight = 10
 
 # Code
 [markup]
   # defaultMarkdownHandler    = "blackfriday"
-  [markup.goldmark]
-    [markup.goldmark.extensions]
-      definitionList          = true
-      footnote                = true
-      linkify                 = true
-      strikethrough           = true
-      table                   = true
-      taskList                = true
-      typographer             = true
-    [markup.goldmark.parser]
-      attribute               = true
-      autoHeadingID           = true
-      autoHeadingIDType       = "github"
-    [markup.goldmark.renderer]
-      hardWraps               = false
-      unsafe                  = true
-      xhtml                   = false
-  [markup.blackFriday]
-    angledQuotes              = false
-    footnoteAnchorPrefix      = ""
-    footnoteReturnLinkContents= ""
-    fractions                 = true
-    hrefTargetBlank           = false
-    latexDashes               = true
-    nofollowLinks             = false
-    noreferrerLinks           = false
-    plainIDAnchors            = true
-    skipHTML                  = false
-    smartDashes               = true
-    smartypants               = true
-    smartypantsQuotesNBSP     = false
-    taskLists                 = true
+  # [markup.goldmark]
   [markup.highlight]
     codeFences                = true
     guessSyntax               = false
     hl_Lines                  = ""
     lineNoStart               = 1
-    lineNos                   = false
-    lineNumbersInTable        = false
+    lineNos                   = true
+    lineNumbersInTable        = true
     noClasses                 = false
     style                     = "dracula"
     tabWidth                  = 4
