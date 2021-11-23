@@ -134,7 +134,7 @@ weight = 5
   themeColor                  = "#1da1f2"
   description                 = "Personal Site By Wisnuwiry"
   orientation                 = "portrait"
-  scope                       = "https://salmantgl.netlify.app/"
+  scope                       = "/"
 
 [outputFormats]
   [outputFormats.MANIFEST]
